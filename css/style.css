@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+::selection {
+  background-color: rgb(85, 85, 85);
+}
+body {
+  background: #000000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* --- Section 1 --- */
+
+.parallax {
+  pointer-events: none;
+}
+
+.navbar {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  display: flex;
+  padding: 0 5rem;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+nav {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  color: #fff;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  font-weight: bold;
+  padding-bottom: 2px;
+  text-decoration: none;
+  background-image: linear-gradient(128deg, #ff8a00 15%, #ccff00 85%);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#tanah {
+  transform: translateY(60%);
+  top: 100px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 4;
+}
+
+.text {
+  position: absolute;
+  padding: 0 5rem;
+  top: 150px;
+}
+.text h1 {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 100px;
+  width: 800px;
+}
+.hero #langit {
+  top: -100px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translate(0, 0);
+}
+
+.hero #bulan {
+  top: -200px;
+  transform: scale(0.7) translateX(40%);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.planets-container {
+  position: relative;
+  height: 100vh;
+  padding: 100px 200px;
+}
+
+.header-content {
+  padding: 0 5rem;
+}
+.text h1 span {
+  background: linear-gradient(128deg, #ff2e00 27.08%, #ffe24a 67.57%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120.75%;
+}
+
+.header-title p {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.btn-scroll {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 6px 6px 6px 18.35px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.btn-scroll a {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-scroll img {
+  width: 10px;
+}
+
+.bulan {
+  position: absolute;
+  width: 833px;
+  /* z-index: -1; */
+  flex-shrink: 0;
+  right: -100px;
+  top: 100px;
+}
+
+.ground {
+  margin-top: 100px;
+  z-index: 20;
+}
+
+/* --- Section 2 --- */
+.moon-portrait {
+  margin-top: 280px;
+  background: #000;
+  z-index: 17;
+padding-top: 100px ;
+}
+
+.portrait-container {
+  justify-content: center;
+  text-align: center;
+}
+
+.portrait-container .text-content h1 {
+  background: #fff;
+  font-size: 100px;
+  color: #020202;
+  font-style: italic;
+  display: inline;
+  justify-content: center;
+  text-align: center;
+}
+
+.portrait-container .text-content span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
+
+/*  card moon portrait */
+.card-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+  position: relative;
+}
+
+.card-container {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card {
+  width: 100px;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card[for="card1"] {
+  background-image: url("../images/Moon-Portrait/card1.svg");
+}
+
+.card[for="card2"] {
+  background-image: url("../images/Moon-Portrait/card2.svg");
+}
+
+.card[for="card3"] {
+  background-image: url("../images/Moon-Portrait/card3.svg");
+}
+
+.card[for="card4"] {
+  background-image: url("../images/Moon-Portrait/card4.svg");
+}
+
+input {
+  display: none;
+}
+
+/* card animation */
+input:checked + label {
+  width: 600px;
+  height: 400px;
+  box-shadow: 0px 5px 30px -5px rgba(255, 255, 255, 0.8);
+}
+
+/* batu */
+.batu1,
+.batu2,
+.batu3 {
+  position: absolute;
+}
+
+.batu1 {
+  left: 100px;
+  top: 50vh;
+  animation: parallaxBatu 3.5s infinite alternate;
+}
+
+.batu2 {
+  right: 40px;
+  top: 30vh;
+  animation: parallaxBatu 4s infinite alternate;
+}
+
+.batu3 {
+  right: 120px;
+  top: 70vh;
+  animation: parallaxBatu 3s infinite alternate;
+}
+
+.batu1 img,
+.batu2 img,
+.batu3 img {
+  width: 70px;
+  height: 80px;
+}
+
+@keyframes parallaxBatu {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* --- Section 3 --- */
+.section3 {
+  display: inline;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0 2rem;
+  color: white;
+  z-index: -5;
+}
+
+.section3-container {
+  background-image: url("../images/Section3-Image/sec3_bg.svg");
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section3-content {
+  margin-top: -200px;
+}
+
+.section3-content h1 {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 130px;
+}
+
+.section3-content h1 span {
+  background: linear-gradient(128deg, #ff2e00 27.08%, #ffe24a 67.57%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120.75%;
+  margin-top: -200px;
+}
+
+
+.section3-top {
+top: -50px;
+left: -100px;
+right: 0;
+  position: absolute;
+  min-width: 2000px;
+  height: 1000px;
+  z-index: 2;
+  object-fit: cover;
+}
+
+.section3-bottom {
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  
+}
+
+.section3-moon img {
+  width: 833px;
+  height: 900px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#progres {
+  position: fixed;
+  /* background-color: #194db9; */
+  z-index: 1000;
+  bottom: 60px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  color: #1d002c; 
+  cursor: pointer;
+}
+
+#progres-value {
+  display: block;
+  height: calc(100% - 12px);
+  width: calc(100% - 12px);
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+}
